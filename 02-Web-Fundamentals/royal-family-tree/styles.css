@@ -1,0 +1,137 @@
+<<<<<<< HEAD
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+*::selection {
+  color: white;
+  background-color: #1182ee;
+}
+body {
+  background-color: white;
+  max-width: 1400px; /* keep cards contained within website*/
+  margin: auto;
+}
+header {
+  text-align: center;
+  height: 80px;
+  padding: 40px;
+  color: rgb(94, 92, 89);
+}
+header h1 {
+  font-size: 40px;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  color: midnightblue;
+  box-shadow: 5px 5px 5px 5px lightgray;
+  opacity: 0.5;
+}
+.card:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.card img {
+  margin: 10px;
+  min-height: 300px;
+  border-radius: 30px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: underline;
+  font-size: 30px;
+}
+#penelope-list {
+  list-style-type: none;
+}
+li:hover {
+  color: #1182eb;
+}
+span {
+  font-size: 1.5em;
+  color: #b48ce0;
+}
+
+i {
+  color: red;
+}
+=======
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+*::selection {
+  color: white;
+  background-color: #1182ee;
+}
+body {
+  background-color: white;
+  max-width: 1400px; /* keep cards contained within website*/
+  margin: auto;
+}
+header {
+  text-align: center;
+  height: 80px;
+  padding: 40px;
+  color: rgb(94, 92, 89);
+}
+header h1 {
+  font-size: 40px;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  color: midnightblue;
+  box-shadow: 5px 5px 5px 5px lightgray;
+  opacity: 0.5;
+}
+.card:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.card img {
+  margin: 10px;
+  min-height: 300px;
+  border-radius: 30px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: underline;
+  font-size: 30px;
+}
+#penelope-list {
+  list-style-type: none;
+}
+li:hover {
+  color: #1182eb;
+}
+span {
+  font-size: 1.5em;
+  color: #b48ce0;
+}
+>>>>>>> 94dd55ce9f0568856b8d12306aa8e5ebbcd2e28c

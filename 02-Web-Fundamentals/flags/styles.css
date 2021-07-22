@@ -1,0 +1,163 @@
+<<<<<<< HEAD
+* {
+  margin: 0;
+  padding: 0;
+}
+.flag {
+  width: 501px;
+  height: 300px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.line {
+  width: auto;
+  height: 100px;
+}
+.line-1 {
+  background-color: black;
+}
+.line-2 {
+  background-color: red;
+}
+.line-3 {
+  background-color: gold;
+}
+
+.line-4 {
+  background-color: #c7293c;
+}
+.line-5 {
+  background-color: white;
+}
+.line-6 {
+  background-color: #416c4b;
+}
+
+.column {
+  height: 300px;
+  width: 167px;
+  float: left;
+}
+.column-1 {
+  background-color: #002395;
+}
+.column-2 {
+  background-color: white;
+}
+.column-3 {
+  background-color: red;
+}
+
+.column-4 {
+  background-color: #15965f;
+}
+.column-5 {
+  background-color: white;
+}
+.column-6 {
+  background-color: #f7843c;
+}
+
+.hungarian-flag {
+  position: relative;
+  top: -680px;
+  z-index: -1;
+}
+
+.german-flag:hover {
+  display: none;
+}
+
+.irish-flag {
+  position: relative;
+  top: -680px;
+  z-index: -1;
+}
+
+.french-flag:active {
+  display: none;
+  transition: 0.9s;
+}
+=======
+* {
+  margin: 0;
+  padding: 0;
+}
+.flag {
+  width: 501px;
+  height: 300px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.line {
+  width: auto;
+  height: 100px;
+}
+.line-1 {
+  background-color: black;
+}
+.line-2 {
+  background-color: red;
+}
+.line-3 {
+  background-color: gold;
+}
+
+.line-4 {
+  background-color: #c7293c;
+}
+.line-5 {
+  background-color: white;
+}
+.line-6 {
+  background-color: #416c4b;
+}
+
+.column {
+  height: 300px;
+  width: 167px;
+  float: left;
+}
+.column-1 {
+  background-color: #002395;
+}
+.column-2 {
+  background-color: white;
+}
+.column-3 {
+  background-color: red;
+}
+
+.column-4 {
+  background-color: #15965f;
+}
+.column-5 {
+  background-color: white;
+}
+.column-6 {
+  background-color: #f7843c;
+}
+
+.hungarian-flag {
+  position: relative;
+  top: -680px;
+  z-index: -1;
+}
+
+.german-flag:hover {
+  display: none;
+}
+
+.irish-flag {
+  position: relative;
+  top: -680px;
+  z-index: -1;
+}
+
+.french-flag:active {
+  display: none;
+  transition: 0.9s;
+}
+>>>>>>> 94dd55ce9f0568856b8d12306aa8e5ebbcd2e28c
