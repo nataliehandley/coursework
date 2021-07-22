@@ -41,11 +41,9 @@ function numberClicked() {
         displayEl.innerHTML = buttonValue;
         calculateResult.push(displayEl.innerHTML);
         console.log(calculateResult);
-        //displayEl.value = buttonValue;
-      //return buttonValue;
+       
        
 })
-
 }
 }
 numberClicked();
@@ -59,7 +57,7 @@ function operatorClicked() {
         displayEl.innerHTML = operatorValue;
         calculateResult.push(displayEl.innerHTML);
         console.log(calculateResult);
-        //return operatorValue;
+        
 })
 }
 }
@@ -69,8 +67,6 @@ function operatorClicked() {
 let finalResult;
 function equalClicked() {
         operatorEl[5].addEventListener("click", () => {
-          // let finalResult = parseInt(calculateResult[0]) + parseInt(calculateResult[2]);
-          // console.log(finalResult);
           if (calculateResult[1] === "+") {
             finalResult = parseInt(calculateResult[0]) + parseInt(calculateResult[2]);
             console.log(finalResult);
@@ -93,25 +89,10 @@ function equalClicked() {
       operatorEl[0].addEventListener("click", () => {
         calculateResult = [];
         displayEl.innerHTML = 0;
-//  var pendingVal = displayEl.innerHTML;
-//  var calculateResult =[];
-//  console.log(pendingVal);
 
       })
     }
     clearDisplay();
-//  function performCalculation(event) {
-//      switch(operatorValue) {
-//          case "+":
-//              pendingVal = buttonValue;
-//              calculateResult.push(pendingVal);
-//              calculateResult.push("+");
-//              break;
-
-//      }
-//  }
-//  console.log(calculateResult);
-
 
 
 
