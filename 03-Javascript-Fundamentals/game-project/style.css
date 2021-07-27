@@ -43,5 +43,8 @@ img {
   border-radius: 20px;
 }
 .square {
-  padding-top: 15px;
+  padding-top: 10px;
+}
+.square:hover {
+  background-color: lightgrey;
 }
