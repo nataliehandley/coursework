@@ -29,29 +29,6 @@ squareLetter[23].value = "X";
 squareLetter[24].value = "Y";
 squareLetter[25].value = "Z";
 
-//TAKE INPUT FROM CLICK TO DETERMINE WHICH LETTER IS CLICKED
-let clickedLetter;
-function letterClicked () {
-    for (var i = 0; i < squareLetter.length; i++) {
-        squareLetter[i].addEventListener("click", (event) => {
-    clickedLetter = event.target.value;
-   correctLetter();
-})
-}
-
-}
-letterClicked();
-
-//SEE IF LETTER CLICKED IS THE CORRECT LETTER
-function correctLetter () {
-    if (clickedLetter === "A") {
-        alert("Correct Answer!");
-
-    } else {
-        alert("Try again!");
-    }
-}
-correctLetter();
 
 //INSERT IMAGE USING JAVASCRIPT (GOOGLED THIS)
 var img = document.createElement("img");
@@ -80,7 +57,7 @@ button.addEventListener("click", () => {
 
 })
 
-//SWITCH FUNCTION TO CHANGE IMAGE TO CORRESPOND WITH LETTER SELECTED
+//SWITCH FUNCTION TO CHANGE IMAGE TO CORRESPOND WITH RANDOM LETTER
 function changeImage() {
 switch(selected) {
     case "A":
@@ -125,7 +102,7 @@ switch(selected) {
         break;
     case "K":
         img.src = "./Images/K.jpeg";
-        document.getElementById("h1-text").innerHTML = "KING";
+        document.getElementById("h1-text").innerHTML = "KITE";
         break;
     case "L":
         img.src = "./Images/L.jpeg";
@@ -133,7 +110,7 @@ switch(selected) {
         break;
     case "M":
         img.src = "./Images/M.jpeg";
-        document.getElementById("h1-text").innerHTML = "MOON";
+        document.getElementById("h1-text").innerHTML = "MONKEY";
         break;
     case "N":
         img.src = "./Images/N.jpeg";
@@ -153,11 +130,11 @@ switch(selected) {
         break;
     case "R":
         img.src = "./Images/R.jpeg";
-        document.getElementById("h1-text").innerHTML = "BALL";
+        document.getElementById("h1-text").innerHTML = "ROCKET";
         break;
     case "S":
         img.src = "./Images/S.jpeg";
-        document.getElementById("h1-text").innerHTML = "SUN";
+        document.getElementById("h1-text").innerHTML = "SNAKE";
         break;
     case "T":
         img.src = "./Images/T.jpeg";
@@ -193,3 +170,48 @@ switch(selected) {
 }
 }
 changeImage();
+
+
+//TAKE INPUT FROM CLICK TO DETERMINE WHICH LETTER IS CLICKED
+let clickedLetter;
+function letterClicked () {
+    for (var i = 0; i < squareLetter.length; i++) {
+        squareLetter[i].addEventListener("click", (event) => {
+    clickedLetter = event.target.value;
+   correctLetter();
+})
+}
+
+}
+letterClicked();
+
+//SEE IF LETTER CLICKED IS THE CORRECT LETTER
+function correctLetter () {
+    if (clickedLetter === selected) {
+        toggleModal();
+        randomLetter();
+        changeImage();
+       
+     
+
+    } else {
+        alert("Try again!");
+    }
+}
+correctLetter();
+
+//CONGRATULATIONS MODAL https://sabe.io/tutorials/how-to-create-modal-popup-box
+//used setTimeout to close modal box after 3 seconds automatically rather than needing to click
+
+const modal = document.querySelector(".modal");
+   
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+        setTimeout(closeModal, 3000);
+    }
+    
+    function closeModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+//INCORRECT ANSWER MODAL
