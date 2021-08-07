@@ -1,3 +1,22 @@
+
+//START GAME ON CLICK OF START ALPHABET GAME BUTTON https://www.w3schools.com/jsref/met_document_createelement.asp
+
+function startGame() {
+    window.addEventListener('load', () => {
+    document.getElementById("container").style.display = "none";
+    var btn = document.createElement("button");
+    btn.innerHTML = "Start the Alphabet Game! ⏯️";
+    document.body.appendChild(btn);
+
+    btn.addEventListener("click", () => {
+    document.getElementById("container").style.display = "";
+    btn.style.display = "none";
+
+})
+});
+}
+startGame();
+
 //ASSIGN VALUES TO LETTER SQUARES
 
 const squareLetter = document.querySelectorAll(".square");
@@ -49,13 +68,6 @@ function randomLetter() {
 
 randomLetter();
 
-//CONSOLE LOG RANDOM LETTER ON CLICK OF NEXT BUTTON
-var button = document.querySelector("#next-letter");
-button.addEventListener("click", () => {
-    randomLetter();
-    changeImage();
-
-})
 
 //SWITCH FUNCTION TO CHANGE IMAGE TO CORRESPOND WITH RANDOM LETTER
 function changeImage() {
@@ -187,14 +199,14 @@ letterClicked();
 
 
 
-//CONGRATULATIONS MODAL https://sabe.io/tutorials/how-to-create-modal-popup-box
+//CREATE CORRECT OR INCORRECT MODAL POP UP https://sabe.io/tutorials/how-to-create-modal-popup-box
 //used setTimeout to close modal box after 3 seconds automatically rather than needing to click
 
 const modal = document.querySelector(".modal");
    
     function toggleModal() {
         modal.classList.toggle("show-modal");
-        setTimeout(closeModal, 3000);
+        setTimeout(closeModal, 1000);
     }
     
     function closeModal() {
@@ -222,4 +234,6 @@ function correctLetter () {
         
     }
 }
-correctLetter();
+// correctLetter();
+
+//KEEP SCORE, MOVE TO NEXT LVEL
