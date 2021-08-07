@@ -185,20 +185,7 @@ function letterClicked () {
 }
 letterClicked();
 
-//SEE IF LETTER CLICKED IS THE CORRECT LETTER
-function correctLetter () {
-    if (clickedLetter === selected) {
-        toggleModal();
-        randomLetter();
-        changeImage();
-       
-     
 
-    } else {
-        alert("Try again!");
-    }
-}
-correctLetter();
 
 //CONGRATULATIONS MODAL https://sabe.io/tutorials/how-to-create-modal-popup-box
 //used setTimeout to close modal box after 3 seconds automatically rather than needing to click
@@ -214,4 +201,25 @@ const modal = document.querySelector(".modal");
         modal.classList.toggle("show-modal");
     }
 
-//INCORRECT ANSWER MODAL
+
+//SEE IF LETTER CLICKED IS THE CORRECT LETTER
+function correctLetter () {
+    if (clickedLetter === selected) {
+        document.querySelector(".modal-content").innerHTML = "👍Right answer!  Hooray!😇";
+        modal.style.backgroundColor = "#E4F2E6";
+        document.querySelector(".modal-content").style.color = "#3AA075";
+        toggleModal();
+        randomLetter();
+        changeImage();
+       
+     
+
+    } else {
+        document.querySelector(".modal-content").innerHTML = "👎Wrong answer, try again!   🙁";
+        document.querySelector(".modal-content").style.color = "#D75760";
+        modal.style.backgroundColor = "#FA8C9A";
+        toggleModal();
+        
+    }
+}
+correctLetter();
