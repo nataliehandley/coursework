@@ -67,6 +67,7 @@ img {
   padding-top: 5px;
   font-weight: 800;
   color: #0765A7;
+  cursor: pointer;
   
 }
 .square:hover {
@@ -74,8 +75,6 @@ img {
   border-radius: 30px;
   
 }
-
-
 .modal {
   position: fixed;
   left: 0;
@@ -109,6 +108,21 @@ img {
   visibility: visible;
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 30px 10px;
+  width: 24rem;
+  border-radius: 0.5rem;
+  font-size: 40px;
+  background-color: #7B60ED;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 
