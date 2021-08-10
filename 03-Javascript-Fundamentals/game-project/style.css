@@ -125,6 +125,13 @@ button {
   cursor: pointer;
 }
 
+p {
+  color: #7B60ED;
+  position: absolute;
+  top: 70%;
+  left: 5%;
+}
+
 
 /*MEDIA QUERIES/*
 
