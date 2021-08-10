@@ -4,13 +4,17 @@
 function startGame() {
     window.addEventListener('load', () => {
     document.getElementById("container").style.display = "none";
-    var btn = document.createElement("button");
+    let btn = document.createElement("button");
     btn.innerHTML = "Start the Alphabet Game! ⏯️";
     document.body.appendChild(btn);
+    let instructions = document.createElement("p");
+    instructions.innerHTML = "Click on the letter the picture begins with! Reach 20 stars 🌟 to move onto the next level";
+    document.body.appendChild(instructions);
 
     btn.addEventListener("click", () => {
     document.getElementById("container").style.display = "";
     btn.style.display = "none";
+    instructions.style.display = "none";
 
 })
 });
@@ -67,7 +71,6 @@ function randomLetter() {
 }
 
 randomLetter();
-
 
 //SWITCH FUNCTION TO CHANGE IMAGE TO CORRESPOND WITH RANDOM LETTER
 function changeImage() {
@@ -183,7 +186,6 @@ switch(selected) {
 }
 changeImage();
 
-
 //TAKE INPUT FROM CLICK TO DETERMINE WHICH LETTER IS CLICKED
 let clickedLetter;
 function letterClicked () {
@@ -193,11 +195,8 @@ function letterClicked () {
    correctLetter();
 })
 }
-
 }
 letterClicked();
-
-
 
 //CREATE CORRECT OR INCORRECT MODAL POP UP https://sabe.io/tutorials/how-to-create-modal-popup-box
 //used setTimeout to close modal box after 3 seconds automatically rather than needing to click
@@ -213,8 +212,8 @@ const modal = document.querySelector(".modal");
         modal.classList.toggle("show-modal");
     }
 
-
 //SEE IF LETTER CLICKED IS THE CORRECT LETTER
+let score = 0;
 function correctLetter () {
     if (clickedLetter === selected) {
         document.querySelector(".modal-content").innerHTML = "👍Right answer!  Hooray!😇";
@@ -223,17 +222,50 @@ function correctLetter () {
         toggleModal();
         randomLetter();
         changeImage();
-       
-     
-
+        score = score + 1;
+        document.querySelector(".square-score").innerHTML = score;
     } else {
         document.querySelector(".modal-content").innerHTML = "👎Wrong answer, try again!   🙁";
         document.querySelector(".modal-content").style.color = "#D75760";
         modal.style.backgroundColor = "#FA8C9A";
-        toggleModal();
-        
+        toggleModal();  
     }
+   if(score === 2){
+    levelTwo();
+   }
+   if(score ===5) {
+       endGame();
+   }
 }
-// correctLetter();
 
-//KEEP SCORE, MOVE TO NEXT LVEL
+//KEEP SCORE, MOVE TO LEVEL 2
+
+function levelTwo () {
+    document.getElementById("container").style.display = "none";
+    let btn = document.createElement("button");
+    btn.innerHTML = "Start Level 2! ⏯️";
+    document.body.appendChild(btn);
+    let instructions = document.createElement("p");
+    instructions.innerHTML = "Level 2! Reach 20 stars 🌟 to move onto the next level";
+    document.body.appendChild(instructions);
+
+    btn.addEventListener("click", () => {
+        document.getElementById("container").style.display = "";
+        btn.style.display = "none";
+        instructions.style.display = "none";
+        document.getElementById("h1-text").style.display = "none";     
+    })
+}
+
+//END GAME ONCE FINAL SCORE REACHED
+
+function endGame() {
+    document.getElementById("container").style.display = "none";
+    let btn = document.createElement("button");
+    btn.innerHTML = "The End ";
+    document.body.appendChild(btn);
+    let instructions = document.createElement("p");
+    instructions.innerHTML = "Well done, you are a 🌟 for learning your letters of the alphabet! ";
+    document.body.appendChild(instructions);
+}
+
