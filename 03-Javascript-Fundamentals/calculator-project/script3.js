@@ -48,6 +48,7 @@ function numberClicked() {
     })}}
     numberClicked();
 
+//function to get value from operator clicked
     let operatorValue;
     let newCalculateResult = [];
     let newFirstValue;
@@ -74,6 +75,7 @@ function numberClicked() {
 
     operatorClicked();
 
+    //function to get result from calculation when the equals button is clicked
     let finalResult;
     function equalClicked() {
         equalEl.addEventListener("click", () => {
@@ -97,20 +99,25 @@ function numberClicked() {
 
     equalClicked();
 
+    //function to clear the display when the AC button is clicked, unfortunatly this isnt working yet!
     // function clearDisplay() {
     //     operatorEl[0].addEventListener("click", () => {
-    //       calculationArray = [];
-    //       newCalculateResult = [];
-    //       calculateResult = [];
-    //       newFirstValue = 0;
+    //       displayValue = 0;
+    //       firstValue = undefined;
     //       displayEl.innerHTML = 0;
+    //       newFirstValue = undefined;
+    //       newCalculateResult = [];
+    //       calculationArray = [];
+    //       calculateResult = [];
+    //       console.log(calculateResult);
+    //       numberClicked();
   
     //     })
     //   }
     //   clearDisplay();
 
     //to do
-    //tidy up code!
-    //display.innerHTML to reflect numbers
+    //tidy up code! DONE
+    //display.innerHTML to reflect numbers DONE
     //add comments
     //clear display
