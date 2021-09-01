@@ -1,5 +1,5 @@
 
-//Getting HTML element reference
+//Getting HTML element references for numbers and operators
 const additionEl = document.querySelector(".addition");
 const subtractionEl = document.querySelector(".subtraction");
 const multiplicationEl = document.querySelector(".multiplication");
@@ -27,63 +27,159 @@ operatorEl[1].value = "/";
 operatorEl[5].value = "=";
 operatorEl[0].value = "ac"
 
-
+//get value of button clicked and input it into display
 
 
 let buttonValue;
-var calculateResult =[];
-displayEl.innerHTML = 0;
+let pendingValue;
+let calculateResult =[];
+let displayValue = 0;
+
 function numberClicked() {
     for (var i = 0; i < buttonEl.length; i++) {
-    buttonEl[i].addEventListener("click", (event) => {
-        buttonValue = event.target.value;
-        console.log(buttonValue);
-        displayEl.innerHTML = buttonValue;
-        calculateResult.push(displayEl.innerHTML);
-        console.log(calculateResult);
+    buttonEl[i].addEventListener("click", updateDisplayVal()) 
+    }}
        
+      
+      
+      
+      
+      
+      
+      
+      // buttonValue = event.target.value;
+      //   console.log(buttonValue);
+      //   displayEl.innerHTML = buttonValue;
+      //   calculateResult.push(displayEl.innerHTML);
+      //   if(buttonValue === 1||2||3||4||5||6||7||8||9||0) {
+      //     displayEl.innerHTML = calculateResult.join("");
+      //    pendingValue = calculateResult.join("");
+      //    console.log(pendingValue);
+      //    alert(pendingValue);
+        
+        //  fullNumber = calculateResult[0]; //figure out how to add fullNumber as first element in the calculateResult array
+        //  console.log(calculateResult);
+        //  calculateResult[0] = fullNumber;
+        //  console.log(calculateResult);
+        // } else {
+        //   alert("+");
+        // }
+        // displayEl.innerHTML = buttonValue;
+        // calculateResult.push(displayEl.innerHTML);
+        // console.log(calculateResult);
+      //  console.log(calculateResult)
        
-})
-}
-}
-numberClicked();
+
+// numberClicked();
 
  let operatorValue;
 function operatorClicked() {
     for (var i = 0; i < operatorEl.length; i++) {
-        operatorEl[i].addEventListener("click", (event) => {
-        operatorValue = event.target.value;
-        console.log(operatorValue);
-        displayEl.innerHTML = operatorValue;
-        calculateResult.push(displayEl.innerHTML);
-        console.log(calculateResult);
+        operatorEl[i].addEventListener("click", performOperation()) 
+    }
+  }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        //   operatorValue = event.target.value;
+        // console.log(operatorValue);
+        // displayEl.innerHTML = operatorValue;
+        // // calculateResult.push(displayEl.innerHTML);
+        // // console.log(calculateResult);
+        // return operatorValue
         
-})
-}
-}
- operatorClicked();
+// })
+// }
+// }
+//  operatorClicked();
  
 
-let finalResult;
-function equalClicked() {
-        operatorEl[5].addEventListener("click", () => {
-          if (calculateResult[1] === "+") {
-            finalResult = parseInt(calculateResult[0]) + parseInt(calculateResult[2]);
-            console.log(finalResult);
-          } else if (calculateResult[1] === "-") {
-            finalResult = parseInt(calculateResult[0]) - parseInt(calculateResult[2]);
-            console.log(finalResult);
-          } else if (calculateResult[1] === "/") {
-            finalResult = parseInt(calculateResult[0]) / parseInt(calculateResult[2]);
-            console.log(finalResult);
-          } else if (calculateResult[1] === "*") {
-            finalResult = parseInt(calculateResult[0]) * parseInt(calculateResult[2]);
-            console.log(finalResult);
+// Updating the display field
+updateDisplayVal = (e) => {
+  var btnText = e.target.innerText;
+  if(displayValue === 0) { 
+     displayValue = ""; 
+  }
+// Append the content of the button we clicked to our displayVal variable and display it
+  displayValue += btnText; 
+  displayEl.innerText = displayValue;
+}
+
+
+
+
+
+
+
+
+// let finalResult;
+// function equalClicked() {
+        // operatorEl[5].addEventListener("click", () => {
+        //   if (operatorValue === "+") {
+        //     alert(operatorValue);
+        //     finalResult = parseInt(calculateResult[0]) + parseInt(calculateResult[2]);
+        //     console.log(finalResult);
+        //   } else if (calculateResult[1] === "-") {
+        //     finalResult = parseInt(calculateResult[0]) - parseInt(calculateResult[2]);
+        //     console.log(finalResult);
+        //   } else if (calculateResult[1] === "/") {
+        //     finalResult = parseInt(calculateResult[0]) / parseInt(calculateResult[2]);
+        //     console.log(finalResult);
+        //   } else if (calculateResult[1] === "*") {
+        //     finalResult = parseInt(calculateResult[0]) * parseInt(calculateResult[2]);
+        //     console.log(finalResult);
+        //   }
+        //   displayEl.innerHTML = finalResult;
+        // })
+        performOperation = (e) => {
+          var operator = e.target.innerText;
+          switch (operator) {
+              case "+":
+                  pendingValue = displayValue;
+                  displayValue = 0;
+                  displayEl.innerText = displayValue;
+                  alert(pendingValue + displayValue);
+                  break;
+              case "-":
+                pendingValue = displayValue;
+                displayValue = 0;
+                displayEl.innerText = displayValue;
+                alert(pendingValue - displayValue);
+                break;
+              case "*":
+                pendingValue = displayValue;
+                displayValue = 0;
+                displayEl.innerText = displayValue;
+                alert(pendingValue * displayValue);
+                break;
+              case "/":
+                pendingValue = displayValue;
+                displayValue = 0;
+                displayEl.innerText = displayValue;
+                alert(pendingValue / displayValue);
+                break;
+              case "=":
+                  alert("hello");
+                  break;
+              default:
+                  break;
           }
-          displayEl.innerHTML = finalResult;
-        })
-    }
-    equalClicked();
+      }
+
+
+
+    
+    // equalClicked();
 
     function clearDisplay() {
       operatorEl[0].addEventListener("click", () => {
@@ -128,4 +224,4 @@ function equalClicked() {
 // //   //displayEl.innerHTML =+ secondInput;
 // //   calculatorArray = [firstInput, secondInput];
   
-// // })
+// //
