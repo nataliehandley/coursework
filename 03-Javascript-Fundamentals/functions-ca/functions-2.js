@@ -31,3 +31,4 @@ function dogYearsCalculator (humanYears) {
 }
 dogYearsCalculator(2);
 dogYearsCalculator(0.5);
+dogYearsCalculator(4);
