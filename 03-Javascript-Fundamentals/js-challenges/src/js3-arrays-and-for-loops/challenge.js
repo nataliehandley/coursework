@@ -136,10 +136,11 @@ export const removeEvenNumbers = (numberArr) => {
 export const generateAverage = (numberArr) => {
   let sum = 0;
   for(let i=0; i < numberArr.length; i++) {
-   sum = sum + numberArr[i];
+   sum +=  numberArr[i];
  return sum;
    
   }
+  
   let averageArray = Math.round(sum / numberArr.length) || 0;
   return averageArray;
 };

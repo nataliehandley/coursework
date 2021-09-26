@@ -121,3 +121,4 @@ function numberClicked() {
     //display.innerHTML to reflect numbers DONE
     //add comments
     //clear display
+    //https://medium.com/@wbl.pauline/how-to-build-a-calculator-using-javascript-no-more-than-100-lines-of-js-code-b9bd087a14e8

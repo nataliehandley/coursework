@@ -28,7 +28,6 @@
 </head>
 
 <body>
-    !git 
     <!--EVENT ATTRIBUTE-->
     <!-- <h1 onmouseover="alert('Mouse over')">This is my heading</h1>
 
@@ -51,6 +50,7 @@
 
     <ul id="names-list"></ul>
     <script>
+
         console.log(document.getElementById("heading"));
         //GETTING A HTML ELEMENT REFERENCE
         const heading = document.getElementById("heading");
@@ -59,7 +59,7 @@
         // //GETTING MULTIPLE ELEMENTS
         const textInputs = document.getElementsByClassName("text-input");
 
-        // console.log(heading);
+        console.log(heading);
         // heading.innerHTML = "Javascript <span>did this </span>"
         // button.style.backgroundColor = "green";
         // button.innerHTML = "Clicked :-)";
@@ -105,11 +105,11 @@
             //event.target.classList.add("valid");
             console.log(event.target.value);
         })
-        // textInputs[1].addEventListener("focus", (event) => {
-        //     //console.log(event);
-        //     //event.target.classList.add("valid");
-        //     console.log(event.target.value);
-        // })
+        textInputs[1].addEventListener("focus", (event) => {
+            //console.log(event);
+            //event.target.classList.add("valid");
+            console.log(event.target.value);
+        })
 
         const nameForm = document.getElementById("name-form");
 
