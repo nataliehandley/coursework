@@ -56,11 +56,11 @@
         }
 
         #welcome-title {
-            padding: 10px;
+            padding: 5px;
         }
 
         form {
-            padding: 30px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             height: 30vh;
@@ -70,7 +70,7 @@
 
         .form-group {
             padding: 10px;
-            margin: 20px;
+            margin: 15px;
             border: 2px solid purple;
             display: flex;
             flex-direction: column;
@@ -100,12 +100,15 @@
             color: white;
             background-color: purple;
             font-size: 25px;
+            border-radius: 5px;
 
         }
 
         #list-summary {
             margin: auto;
             color: purple;
+            height: 30%;
+
         }
 
         .form-label {
@@ -115,11 +118,11 @@
 
 
         .valid {
-            border: 5px solid green;
+            border: 3px solid green;
         }
 
         .invalid {
-            border: 5px solid red;
+            border: 3px solid red;
         }
 
         .active {
@@ -205,34 +208,15 @@
         handleInputChange();
 
 
-
-
-
-
-
-        // const handleInputChange = (event) => {
-        //     // 3.1 Stop the form from submitting
-        //     event.preventDefault();
-        //     // 3.2 Display a success if the form valid
-        //     const errorName = document.getElementById("error-name").value;
-        //     if (formInputs[0].value && formInputs[1].value) {
-        //         errorMsg.classList.remove("show");
-        //         alert("You have registered");
-        //         welcomeElement.innerHTML = "Thank you for registering";
-        //     } else {
-        //         errorMsg.classList.add("show");
-        //     }
-        // };
-
         // EXTENSION Dynamically add a ul/li list beneath the form with the summary points of conference
-        const summaryPoints = ["Intro", "SCSS", "Disco"];
+        const summaryPoints = ["Intro", "SCSS", "Disco", "Challenges"];
         const summaryList = document.getElementById("list-summary");
 
         const summaryPointsHTML = summaryPoints.map((summaryPoint) => {
             return `<li>${summaryPoint}</li>`;
         });
 
-        summaryList.innerHTML = summaryPointsHTML.join("");
+        summaryList.innerHTML = "Summary" + summaryPointsHTML.join("");
     </script>
 </body>
 

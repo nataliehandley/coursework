@@ -40,11 +40,11 @@ function numberClicked() {
     buttonEl[i].addEventListener("click", (event) => {
         buttonValue = event.target.value;//console.log each button pressed and its value
         displayValue = 0;
-        calculateResult.push(buttonValue);
-        firstValue = parseInt(calculateResult.join(""));
-        console.log(firstValue);
-        displayValue = firstValue;
-        displayEl.innerHTML = firstValue;
+        calculateResult.push(buttonValue); //add button value to an array called calculateResult
+        firstValue = parseInt(calculateResult.join("")); //join the numbers together to make a multiple digit number eg 2,2 is 22
+        console.log(firstValue); 
+        displayValue = firstValue; 
+        displayEl.innerHTML = firstValue; //changes the display value from 0 to the first value
     })}}
     numberClicked();
 
@@ -57,14 +57,16 @@ function numberClicked() {
     function operatorClicked() {
         for (var i = 0; i < operatorEl.length; i++) {
             operatorEl[i].addEventListener("click", (event) => {
-                operatorValue = event.target.value;
-               displayEl.innerHTML = operatorValue;
-                calculationArray.push(displayValue);
-                calculationArray.push(operatorValue);
+                operatorValue = event.target.value; //gets the value of the operator button clicked
+               displayEl.innerHTML = operatorValue; //changes the display value to show the operator value
+                calculationArray.push(displayValue); //adding the first value to the calculation array
+                console.log(displayValue);
+                calculationArray.push(operatorValue); //adding the operator to the calculation array
                 console.log(calculationArray);
-                for (var i = 0; i < buttonEl.length; i++) {
+                for (var i = 0; i < buttonEl.length; i++) { //had to call the numberClicked() function again 
+                  //within operatorClicked() as I don't quite understand how to make it work any other way!
                     buttonEl[i].addEventListener("click", (event) => {
-                        buttonValue = event.target.value;//console.log each button pressed and its value
+                        buttonValue = event.target.value;
                         newCalculateResult.push(buttonValue);
                         newFirstValue = parseInt(newCalculateResult.join(""));
                         console.log(newFirstValue);
@@ -106,7 +108,6 @@ function numberClicked() {
             displayEl.innerHTML = 0;
             displayValue = 0;
           }
-  
         })
       }
       clearDisplay();
