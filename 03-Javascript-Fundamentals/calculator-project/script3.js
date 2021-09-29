@@ -5,8 +5,8 @@ const multiplicationEl = document.querySelector(".multiplication");
 const divisionEl = document.querySelector(".division");
 const displayEl = document.querySelector(".display");
 const equalEl = document.querySelector('.equal');
-const buttonEl = document.querySelectorAll(".button");
-const operatorEl = document.querySelectorAll(".button-operator");
+let buttonEl = document.querySelectorAll(".button");
+let operatorEl = document.querySelectorAll(".button-operator");
 
 //values of each number button
 buttonEl[11].value = 0;
@@ -99,24 +99,16 @@ function numberClicked() {
 
     equalClicked();
 
-    //function to clear the display when the AC button is clicked, unfortunatly this isnt working yet!
-    // function clearDisplay() {
-    //     operatorEl[0].addEventListener("click", () => {
-    //       displayValue = 0;
-    //       firstValue = undefined;
-    //       displayEl.innerHTML = 0;
-    //       newFirstValue = undefined;
-    //       newCalculateResult = [];
-    //       calculationArray = [];
-    //       calculateResult = [];
-    //       console.log(calculateResult);
-    //       numberClicked();
+    //function to clear the display when the AC button is clicked
+    function clearDisplay() {
+        operatorEl[0].addEventListener("click", () => {
+          if (displayValue != 0) {
+            displayEl.innerHTML = 0;
+            displayValue = 0;
+          }
   
-    //     })
-    //   }
-    //   clearDisplay();
+        })
+      }
+      clearDisplay();
 
-   
-    //add comments
-    //clear display
-    //https://medium.com/@wbl.pauline/how-to-build-a-calculator-using-javascript-no-more-than-100-lines-of-js-code-b9bd087a14e8
+  
