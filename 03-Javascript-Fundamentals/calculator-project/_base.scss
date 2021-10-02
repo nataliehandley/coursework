@@ -1,0 +1,19 @@
+$font-body:  Helvetica, Arial, sans-serif;
+
+$color-primary: #C6B4CE;
+$color-secondary: #3C5186;
+$color-button: #9B72AA;
+$color-white: #FFF5DE;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-body;
+    color: $color-white;
+  }
+
+  
+  body {
+    font-size: 25px;
+  }
