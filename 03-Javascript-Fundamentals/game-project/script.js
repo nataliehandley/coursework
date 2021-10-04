@@ -8,7 +8,7 @@ function startGame() {
     btn.innerHTML = "Start the Alphabet Game! ⏯️";
     document.body.appendChild(btn);
     let instructions = document.createElement("p");
-    instructions.innerHTML = "Click on the letter the picture begins with! Reach 20 stars 🌟 to move onto the next level";
+    instructions.innerHTML = "Click on the correct letter to gain stars!🌟";
     document.body.appendChild(instructions);
 
     btn.addEventListener("click", () => {
@@ -224,16 +224,17 @@ function correctLetter () {
         changeImage();
         score = score + 1;
         document.querySelector(".square-score").innerHTML = score;
+        document.querySelector(".square-score").style.color = "red";
     } else {
         document.querySelector(".modal-content").innerHTML = "👎Wrong answer, try again!   🙁";
         document.querySelector(".modal-content").style.color = "#D75760";
         modal.style.backgroundColor = "#FA8C9A";
         toggleModal();  
     }
-   if(score === 2){
+   if(score === 5){
     levelTwo();
    }
-   if(score ===5) {
+   if(score ===10) {
        endGame();
    }
 }
@@ -246,7 +247,7 @@ function levelTwo () {
     btn.innerHTML = "Start Level 2! ⏯️";
     document.body.appendChild(btn);
     let instructions = document.createElement("p");
-    instructions.innerHTML = "Level 2! Reach 20 stars 🌟 to move onto the next level";
+    instructions.innerHTML = "Reach 10 stars 🌟 to complete the game!";
     document.body.appendChild(instructions);
 
     btn.addEventListener("click", () => {
@@ -262,10 +263,10 @@ function levelTwo () {
 function endGame() {
     document.getElementById("container").style.display = "none";
     let btn = document.createElement("button");
-    btn.innerHTML = "The End ";
+    btn.innerHTML = "Completed!";
     document.body.appendChild(btn);
     let instructions = document.createElement("p");
-    instructions.innerHTML = "Well done, you are a 🌟 for learning your letters of the alphabet! ";
+    instructions.innerHTML = "Well done, you are a 🌟 for learning your letters! ";
     document.body.appendChild(instructions);
 }
 

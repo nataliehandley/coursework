@@ -1,13 +1,13 @@
-//const studentContainer = document.querySelector(".students-container");
+// const studentContainer = document.querySelector(".students-container");
 
-//studentContainer.style.border = "50px solid red";
+// // studentContainer.style.border = "50px solid red";
 
 // const person = {
 //     firstName: "Natalie",
 //     lastName: "Handley",
 //     quote: "Hands, face , space",
-//     skills: ["html", "css", "javascript"],
-//     imgURL: "https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png",
+//     skills: ["html", "css", "javascript"],  
+//     imgURL: "./—Pngtree—user free button png image_4687746.png",
 //     getFullName() {
 //         return `${this.firstName} ${this.lastName}`
 //     },
@@ -25,23 +25,23 @@
 //         <h3>Skills</h3>
 //         <ul>${this.getSkillsHTML()}</ul>
 //     </article 
-//     `;
+//     `
 //         return personHTML;
-//     },
+//     }
+// }
 
-// } ;
 // for (let index = 0; index < 10; index++) {
 //     studentContainer.innerHTML += person.getPersonHTML();
 // }
-//     // studentContainer.innerHTML = `
-//     // <article class="student-card">
-//     //     <img src=${person.imgURL}/>
-//     //     <h2>${person.getFullName()}</h2>
-//     //     <blockquote>${person.quote}</blockquote>
-//     //     <h3>Skills</h3>
-//     //     <ul>${person.getSkillsHTML()}</ul>
-//     // </article 
-//     // `;
+    // studentContainer.innerHTML = `
+    // <article class="student-card">
+    //     <img src=${person.imgURL}/>
+    //     <h2>${person.getFullName()}</h2>
+    //     <blockquote>${person.quote}</blockquote>
+    //     <h3>Skills</h3>
+    //     <ul>${person.getSkillsHTML()}</ul>
+    // </article 
+    // `;
 
 // //write a method on person object that uses the skills array
 // //iterate over skills array and generate a list item for each skill
