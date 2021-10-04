@@ -1,6 +1,8 @@
 
 //START GAME ON CLICK OF START ALPHABET GAME BUTTON https://www.w3schools.com/jsref/met_document_createelement.asp
 
+//THE MAIN CONTAINER THAT HAS THE GAME IN IT IS HIDDEN AT THE BEGINNING TO ALLOW THE PLAYER TO CLICK THE START BUTTON
+
 function startGame() {
     window.addEventListener('load', () => {
     document.getElementById("container").style.display = "none";

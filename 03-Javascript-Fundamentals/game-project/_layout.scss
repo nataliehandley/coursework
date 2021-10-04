@@ -1,0 +1,57 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    height: 80vh;
+  }
+  .box {
+    width: 100%;
+    border-radius: 20px;
+    background-color: $color-white;
+    margin-top: 10px;
+    border: 8px solid $color-primary;
+  }
+  
+  .box-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 53%;
+    background-color: $color-white;
+
+    #main-image {
+        display: flex;
+        height: 80%;
+        justify-content: center;
+      }
+
+  
+  }
+  .box-2 {
+    height: 75%;
+
+    .grid {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 10px;
+        padding: 10px;
+        text-align: center;
+        background-color: $color-white;
+        border-radius: 20px;
+
+        .square {
+            padding-top: 5px;
+            font-weight: 800;
+            color: $color-blue;
+            cursor: pointer;
+          }
+          .square:hover {
+            background-color: $color-secondary;
+            border-radius: 30px;
+          }
+      }
+  }
+  
