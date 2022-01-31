@@ -18,7 +18,10 @@
  * @returns {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean}[]} The data from the API
  */
  export const getData = (url) => {
-  // Your code here
+    fetch(url)
+    .then(response => response.json())
+    .then(json => (json))
+    .catch(err => (err))
 };
 
 /**
