@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {firestore} from "./firebase.js";
-import {collection, addDoc, doc, getDoc, getDocs, updateDoc} from "firebase/firestore";
+import {collection, addDoc, doc, getDoc, getDocs, updateDoc, deleteDoc} from "firebase/firestore";
 
 function App() {
 
@@ -12,19 +12,16 @@ function App() {
       address: "London"
 
     }
-
+    //Create
     const handleCreate = () => {
       const usersCollection = collection(firestore, "users");
 
       addDoc(usersCollection, user);
 
-      const updateRef = doc("id", "name", "isCoach", "address");
 
-      updateDoc(updateRef, {
-        name : "Fred"
-      })
     }
 
+    //Read
     const handleRead = () => {
       const usersCollection = collection(firestore, "users");
 
@@ -35,13 +32,32 @@ function App() {
         })
       })
 
-      const docRef = doc(firestore, "users", "OrNJ66VDmIXautofOzn7");
+      const docRef = doc(firestore, "users", "iglIUCXKqS8BKNb88apR");
       getDoc(docRef).then(response => {
         console.log(response.data());
       })
     }
 
+    //Update
 
+    const handleUpdate = () => {
+      const updateRef = doc(firestore, "users", "zyWwW3undixMz12dPRgl");
+      updateDoc(updateRef, {name:"Fred"})
+      getDoc(updateRef).then(response => {
+        console.log(response.data());
+      })
+    }
+    
+    
+    //Delete
+
+    const handleDelete = () => {
+      const deleteRef = doc(firestore, "users", "zyWwW3undixMz12dPRgl");
+      deleteDoc(deleteRef)
+      getDoc(deleteRef).then(response => {
+        console.log(response.data());
+      })
+    }
 
 
   return (
@@ -54,6 +70,14 @@ function App() {
       <section>
         <h2>Read a User</h2>
         <button onClick={handleRead}>Do it</button>
+      </section>
+      <section>
+        <h2>Update a User</h2>
+        <button onClick={handleUpdate}>Do it</button>
+      </section>
+      <section>
+        <h2>Delete a User</h2>
+        <button onClick={handleDelete}>Do it</button>
       </section>
     </div>
   );
