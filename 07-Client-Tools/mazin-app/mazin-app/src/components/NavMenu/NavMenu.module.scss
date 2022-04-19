@@ -1,0 +1,21 @@
+.navMenu {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.navButton {
+    width: 120px;
+    border-radius: 5px;
+    background-color: teal;
+    
+    border: none;
+    height: 40px;
+    color: white;
+    margin-left: 10px;
+}
+
+.user {
+    width: 40%;
+}

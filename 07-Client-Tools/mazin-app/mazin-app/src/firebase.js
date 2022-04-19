@@ -10,18 +10,25 @@ import firebase from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAyDv5KvGygfeZEVZ5MM-IWAWJ_0ALAb_k",
-  authDomain: "challenge-43bf0.firebaseapp.com",
-  projectId: " challenge-43bf0",
-  storageBucket: "challenge-43bf0.appspot.com",
-  messagingSenderId: "189487308126",
-  appId: "1:189487308126:web:54f98b2bd59006af9103cf"
-};
+    apiKey: "AIzaSyDaQFNN7wbbLR7THhLvR3tt0jv8i7JyIS8",
+    authDomain: "mazinapp-857e4.firebaseapp.com",
+    projectId: "mazinapp-857e4",
+    storageBucket: "mazinapp-857e4.appspot.com",
+    messagingSenderId: "583019744071",
+    appId: "1:583019744071:web:a9f6f155d16baf953f9a62"
+  };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 
 export const firestore = getFirestore(app);
 export default firebase;
+
+
+
+
+
+
 

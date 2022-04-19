@@ -1,0 +1,21 @@
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+   
+    
+      
+}
+
+.displayTitle {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    text-align: center;
+    border: 2px dotted black;
+    height: 400px;
+
+}

@@ -1,0 +1,32 @@
+.home {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button {
+    width: 100%;
+    border-radius: 5px;
+    background-color: teal;
+    border: none;
+    font-size: 20px;
+    height: 40px;
+  }
+
+.homeButton {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
